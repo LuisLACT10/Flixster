@@ -22,11 +22,11 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 ### App Walkthough GIF
 
-<img src="YOUR_GIF_URL_HERE" width=250><br>
+<img src="https://github.com/LuisLACT10/Flixster/blob/master/Video_Walkthrough_2.gif" width=250><br>
 
 ### Notes
 
-I improve a little in the UX aspect. I did add a fade-in effect on the image. I wanted to add a background show to the image and add a border to the container. I still a lot to read more about the UX in android.
+I improved a little bit in the UX aspect. I did add a fade-in effect on the image. I wanted to add a background show to the image and add a border to the container. I still have a lot to read more about the UX in android.
 
 ## Open-source libraries used
 - [Android Async HTTP](https://github.com/codepath/CPAsyncHttpClient) - Simple asynchronous HTTP requests with JSON parsing
