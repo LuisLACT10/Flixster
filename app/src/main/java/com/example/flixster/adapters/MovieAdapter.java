@@ -13,6 +13,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.MultiTransformation;
+import com.bumptech.glide.load.resource.bitmap.CenterCrop;
+import com.bumptech.glide.load.resource.bitmap.CircleCrop;
+import com.bumptech.glide.load.resource.bitmap.FitCenter;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.flixster.DetailActivity;
 import com.example.flixster.R;
 import com.example.flixster.models.Movie;
@@ -23,6 +29,9 @@ import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
+
+import static com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
 
@@ -89,7 +98,16 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
                 // else imageUrl = poster image
                 imageUrl = movie.getPosterPath();
             }
-            Glide.with(context).load(imageUrl).into(ivPoster);
+            int radius = 30; // corner radius, higher value = more rounded
+            int margin = 10; // crop margin, set to 0 for corners with no crop
+
+            //Glide.with(context).load(imageUrl).into(ivPoster);
+            //Glide.with(context).load(imageUrl).transform(new MultiTransformation(new FitCenter(), new CircleCrop())).into(ivPoster);
+            Glide.with(context).load(imageUrl).apply(new RequestOptions().circleCrop()).transition(withCrossFade()).into(ivPoster);
+
+            //Glide.with(context).load(imageUrl).transforms(new RoundedCornersTransformation(radius, margin));
+            //Glide.with(context).load(imageUrl).apply(RequestOptions().transforms(new RoundedCornersTransformation(radius, 0))).into(ivPoster);
+
 
             //1. Register click listener on the whole row
 

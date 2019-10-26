@@ -13,12 +13,12 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 #### BONUS
 
-- [ ] Trailers for popular movies are played automatically when the movie is selected (1 point).
+- [] Trailers for popular movies are played automatically when the movie is selected (1 point).
   - [ ] When clicking on a popular movie (i.e. a movie voted for more than 5 stars) the video should be played immediately.
   - [ ] Less popular videos rely on the detailed page should show an image preview that can initiate playing a YouTube video.
 - [ ] Add a play icon overlay to popular movies to indicate that the movie can be played (1 point).
 - [ ] Apply the popular ButterKnife annotation library to reduce view boilerplate. (1 point)
-- [ ] Add a rounded corners for the images using the Glide transformations. (1 point)
+- [x] Add a rounded corners for the images using the Glide transformations. (1 point)
 
 ### App Walkthough GIF
 
@@ -26,7 +26,7 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 ### Notes
 
-Describe any challenges encountered while building the app.
+I improve a little in the UX aspect. I did add a fade-in effect on the image. I wanted to add a background show to the image and add a border to the container. I still a lot to read more about the UX in android.
 
 ## Open-source libraries used
 - [Android Async HTTP](https://github.com/codepath/CPAsyncHttpClient) - Simple asynchronous HTTP requests with JSON parsing
